@@ -3,22 +3,24 @@ import gsap from 'gsap';
 
 const experienceData = [
   {
-    year: "2023 - Present",
-    role: "Senior Frontend Engineer",
-    company: "TechNova Inc.",
-    description: "Leading the front-end architecture for a high-traffic SaaS platform. Implemented complex UI components and state management, improving load times by 40%."
+    year: "2026 (Upcoming)",
+    role: "Software Engineering Intern",
+    company: "National Aluminium Company Limited (NALCO)",
+    location: "Angul, Odisha",
+    description: "Assisting in the development and optimization of industrial software solutions. Working with enterprise systems to improve operational efficiency and data management."
   },
   {
-    year: "2021 - 2023",
-    role: "Full Stack Developer",
-    company: "Creative Studio Agency",
-    description: "Developed award-winning web applications for global clients. Specialized in building custom WordPress themes and headless Shopify integrations."
+    year: "Sep 2025 – Present",
+    role: "Full Stack Development Intern",
+    company: "Odisha Computer Application Centre",
+    location: "Bhubaneswar, India",
+    description: "Developed backend features for government web applications using Django. Designed scalable relational database schemas using PostgreSQL. Built responsive UI components with HTML, CSS, and Bootstrap. Contributed to full-stack architecture and performance optimization for public sector digital systems."
   },
   {
-    year: "2019 - 2021",
+    year: "2023 - 2024",
     role: "Junior Web Developer",
-    company: "Startup Hub",
-    description: "Assisted in the development of internal tools using React and Node.js. Wrote comprehensive unit tests and participated in daily code reviews."
+    company: "Freelance / Personal Projects",
+    description: "Built premium, interactive web experiences and explored modern frontend frameworks including React and GSAP."
   }
 ];
 
@@ -98,7 +100,8 @@ const Experience = () => {
                   <div className="bg-white/5 border border-white/10 p-6 md:p-8 rounded-2xl hover:bg-white/10 transition-colors">
                     <span className="text-accent-blue font-mono text-sm mb-2 block">{exp.year}</span>
                     <h3 className="text-2xl font-bold text-white mb-1">{exp.role}</h3>
-                    <h4 className="text-gray-400 text-lg mb-4">{exp.company}</h4>
+                    <h4 className="text-gray-400 text-lg mb-1">{exp.company}</h4>
+                    {exp.location && <p className="text-gray-500 text-sm mb-4">📍 {exp.location}</p>}
                     <p className="text-gray-300 text-sm leading-relaxed">
                       {exp.description}
                     </p>

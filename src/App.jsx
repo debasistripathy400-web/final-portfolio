@@ -15,6 +15,9 @@ import Skills from './sections/Skills';
 import Experience from './sections/Experience';
 import Contact from './sections/Contact';
 
+// Components
+import SocialFloating from './components/SocialFloating';
+
 // Register standard GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
 
@@ -30,6 +33,7 @@ function App() {
       {loading && <Loader onComplete={() => setLoading(false)} />}
       <CustomCursor />
       <Navbar />
+      <SocialFloating />
 
       <main className="relative z-10 w-full overflow-x-hidden">
         <Hero />
