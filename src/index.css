@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #030712;
+  /* deep navy/black */
+  --color-accent-blue: #0ea5e9;
+  /* cyan */
+  --color-accent-purple: #8b5cf6;
+  /* purple */
+  --color-text: #f9fafb;
+}
+
+body {
+  @apply bg-primary text-text font-sans antialiased overflow-x-hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-primary;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-600;
+}
+
+/* Base utility for text gradient */
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-accent-blue to-accent-purple;
+}
+
+/* Focus outline */
+:focus-visible {
+  @apply outline-none ring-2 ring-accent-blue ring-offset-2 ring-offset-primary;
+}
