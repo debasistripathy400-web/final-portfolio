@@ -59,18 +59,18 @@ const Hero = () => {
             </div>
 
             <div className="overflow-hidden leading-tight py-2 pr-4">
-              <h1 className="hero-text text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold tracking-tighter text-white">
+              <h1 className="hero-text text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold tracking-tighter text-text">
                 Hi, I'm <br className="sm:hidden" /> <span className="text-gradient pr-2">Debasis Tripathy</span>
               </h1>
             </div>
 
             <div className="overflow-hidden leading-tight py-2">
-              <h1 className="hero-text text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tighter text-gray-300">
+              <h1 className="hero-text text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tighter text-secondary">
                 Creative Developer.
               </h1>
             </div>
 
-            <p className="hero-subtitle mt-6 max-w-xl text-gray-400 text-lg md:text-xl font-light">
+            <p className="hero-subtitle mt-6 max-w-xl text-secondary text-lg md:text-xl font-light">
               I build premium, interactive web experiences that merge design with high performance engineering.
               Bringing ideas to life on the internet.
             </p>
@@ -78,14 +78,22 @@ const Hero = () => {
             <div className="hero-buttons mt-10 flex flex-col sm:flex-row items-center gap-4">
               <a
                 href="#projects"
-                className="group flex items-center gap-2 bg-white text-primary px-8 py-4 rounded-full font-bold hover:bg-gray-200 transition-all duration-300 transform hover:scale-105"
+                className="group flex items-center gap-2 bg-white text-slate-950 border border-border dark:border-none px-8 py-4 rounded-full font-bold hover:bg-slate-50 transition-all duration-300 transform hover:scale-105"
               >
                 View Work
-                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                <ArrowRight size={18} className="text-slate-950 group-hover:translate-x-1 transition-transform" />
+              </a>
+              <a
+                href="/resume.pdf"
+                download
+                className="flex items-center gap-2 bg-transparent border border-border text-text px-8 py-4 rounded-full font-semibold hover:bg-surface transition-all duration-300"
+              >
+                Resume
+                <Download size={18} />
               </a>
               <a
                 href="#contact"
-                className="flex items-center gap-2 bg-transparent border border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/5 transition-all duration-300"
+                className="flex items-center gap-2 bg-transparent border border-border text-text px-8 py-4 rounded-full font-semibold hover:bg-surface transition-all duration-300 opacity-70 hover:opacity-100"
               >
                 Contact Me
               </a>
@@ -99,7 +107,7 @@ const Hero = () => {
               <div className="absolute inset-0 bg-white/5 blur-3xl rounded-full"></div>
 
               {/* Clean, professional container */}
-              <div className="w-full h-full relative rounded-2xl overflow-hidden border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] transform hover:-translate-y-1 transition-transform duration-300 bg-[#0f1115]">
+              <div className="w-full h-full relative rounded-2xl overflow-hidden border border-border shadow-[0_20px_50px_rgba(0,0,0,0.1)] transform hover:-translate-y-1 transition-transform duration-300 bg-surface">
                 <img
                   src="/profile.jpeg"
                   alt="Debasis Tripathy"

@@ -97,7 +97,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <section id="projects" ref={sectionRef} className="py-24 relative bg-black/50">
+    <section id="projects" ref={sectionRef} className="py-24 relative bg-primary/20 backdrop-blur-sm">
       <div className="container mx-auto px-6 md:px-12">
         <h2 className="project-header text-4xl md:text-5xl font-bold mb-16 text-center">
           Featured <span className="text-gradient">Projects.</span>
@@ -107,7 +107,7 @@ const Projects = () => {
           {projects.map((project) => (
             <div 
               key={project.id} 
-              className="project-card group block relative rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-500"
+              className="project-card group block relative rounded-2xl overflow-hidden bg-surface border border-border hover:border-accent-blue/30 transition-all duration-500 shadow-xl"
             >
               <div className="relative h-64 md:h-80 overflow-hidden">
                 <div className="absolute inset-0 bg-primary/40 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
@@ -120,10 +120,10 @@ const Projects = () => {
               </div>
               
               <div className="p-8 relative z-20">
-                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-accent-blue transition-colors">
+                <h3 className="text-2xl font-bold text-text mb-3 group-hover:text-accent-blue transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-gray-400 mb-6 text-sm leading-relaxed">
+                <p className="text-secondary mb-6 text-sm leading-relaxed">
                   {project.description}
                 </p>
                 
@@ -131,7 +131,7 @@ const Projects = () => {
                   {project.tech.map((tech) => (
                     <span 
                       key={tech} 
-                      className="px-3 py-1 text-xs font-medium border border-white/10 rounded-full text-gray-300 bg-white/5"
+                      className="px-3 py-1 text-xs font-medium border border-border rounded-full text-secondary bg-primary/5"
                     >
                       {tech}
                     </span>
@@ -139,10 +139,10 @@ const Projects = () => {
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <a href={project.live} className="flex items-center gap-2 text-sm font-semibold text-white hover:text-accent-blue transition-colors">
+                  <a href={project.live} className="flex items-center gap-2 text-sm font-semibold text-text hover:text-accent-blue transition-colors">
                     <ExternalLink size={18} /> Live Demo
                   </a>
-                  <a href={project.github} className="flex items-center gap-2 text-sm font-semibold text-white hover:text-accent-purple transition-colors">
+                  <a href={project.github} className="flex items-center gap-2 text-sm font-semibold text-text hover:text-accent-purple transition-colors">
                     <FaGithub size={18} /> Source Code
                   </a>
                 </div>

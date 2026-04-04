@@ -13,6 +13,7 @@ import About from './sections/About';
 import Projects from './sections/Projects';
 import Skills from './sections/Skills';
 import Experience from './sections/Experience';
+import Resume from './sections/Resume';
 import Contact from './sections/Contact';
 
 // Components
@@ -23,16 +24,23 @@ gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
-    // Optionally trigger something right after load
-  }, [loading]);
+    if (isDarkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [isDarkMode]);
+
+  const toggleTheme = () => setIsDarkMode(prev => !prev);
 
   return (
     <>
       {loading && <Loader onComplete={() => setLoading(false)} />}
       <CustomCursor />
-      <Navbar />
+      <Navbar isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
       <SocialFloating />
 
       <main className="relative z-10 w-full overflow-x-hidden">
@@ -41,6 +49,7 @@ function App() {
         <Projects />
         <Skills />
         <Experience />
+        <Resume />
         <Contact />
       </main>
 

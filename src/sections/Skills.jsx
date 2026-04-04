@@ -64,16 +64,16 @@ const Skills = () => {
 
         <div className="flex flex-col gap-12 max-w-4xl mx-auto">
           {skillsData.map((group, idx) => (
-            <div key={idx} className="skill-category bg-white/5 border border-white/10 p-8 rounded-2xl relative overflow-hidden group">
+            <div key={idx} className="skill-category bg-surface border border-border p-8 rounded-2xl relative overflow-hidden group">
               <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-accent-blue to-accent-purple transform origin-top group-hover:scale-y-100 transition-transform duration-500"></div>
 
-              <h3 className="text-2xl font-bold text-white mb-6 ml-2">{group.category}</h3>
+              <h3 className="text-2xl font-bold text-text mb-6 ml-2">{group.category}</h3>
 
               <div className="flex flex-wrap gap-4 pl-2">
                 {group.items.map((skill, i) => (
                   <div
                     key={i}
-                    className="skill-badge px-6 py-3 bg-primary border border-white/10 rounded-lg text-gray-300 font-medium hover:border-accent-blue hover:text-white transition-colors cursor-default"
+                    className="skill-badge px-6 py-3 bg-primary border border-border rounded-lg text-secondary font-medium hover:border-accent-blue hover:text-text transition-colors cursor-default"
                   >
                     {skill}
                   </div>

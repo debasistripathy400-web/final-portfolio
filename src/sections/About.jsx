@@ -48,7 +48,7 @@ const About = () => {
             Designing logic, building <span className="text-gradient">experiences.</span>
           </h2>
           
-          <div className="space-y-6 text-gray-300 text-lg md:text-xl font-light leading-relaxed">
+          <div className="space-y-6 text-secondary text-lg md:text-xl font-light leading-relaxed">
             <p className="about-reveal">
               I am a passionate software engineer specializing in building exceptional digital experiences. 
               Currently, I'm focused on rendering the intricate dance between design and high-performance code intuitive and captivating.
@@ -61,22 +61,22 @@ const About = () => {
           </div>
 
           <div className="features-container grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
-            <div className="feature-card bg-white/5 border border-white/10 p-8 rounded-2xl hover:bg-white/10 transition-colors">
+            <div className="feature-card bg-surface border border-border p-8 rounded-2xl hover:bg-white/10 transition-colors">
               <MonitorSmartphone className="text-accent-blue mb-4 w-10 h-10" />
-              <h3 className="text-xl font-bold text-white mb-2">Frontend</h3>
-              <p className="text-gray-400 text-sm">React, Next.js, and modern CSS to craft engaging user interfaces.</p>
+              <h3 className="text-xl font-bold text-text mb-2">Frontend</h3>
+              <p className="text-secondary text-sm">React, Next.js, and modern CSS to craft engaging user interfaces.</p>
             </div>
             
-            <div className="feature-card bg-white/5 border border-white/10 p-8 rounded-2xl hover:bg-white/10 transition-colors">
+            <div className="feature-card bg-surface border border-border p-8 rounded-2xl hover:bg-white/10 transition-colors">
               <Code2 className="text-accent-purple mb-4 w-10 h-10" />
-              <h3 className="text-xl font-bold text-white mb-2">Backend</h3>
-              <p className="text-gray-400 text-sm">Scalable server architectures using Node.js, Python, and SQL/NoSQL databases.</p>
+              <h3 className="text-xl font-bold text-text mb-2">Backend</h3>
+              <p className="text-secondary text-sm">Scalable server architectures using Node.js, Python, and SQL/NoSQL databases.</p>
             </div>
             
-            <div className="feature-card bg-white/5 border border-white/10 p-8 rounded-2xl hover:bg-white/10 transition-colors">
+            <div className="feature-card bg-surface border border-border p-8 rounded-2xl hover:bg-white/10 transition-colors">
               <Rocket className="text-accent-blue mb-4 w-10 h-10" />
-              <h3 className="text-xl font-bold text-white mb-2">Performance</h3>
-              <p className="text-gray-400 text-sm">Optimizing loading speeds, animations, and SEO for maximum impact.</p>
+              <h3 className="text-xl font-bold text-text mb-2">Performance</h3>
+              <p className="text-secondary text-sm">Optimizing loading speeds, animations, and SEO for maximum impact.</p>
             </div>
           </div>
         </div>

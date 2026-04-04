@@ -72,7 +72,7 @@ const Experience = () => {
   }, []);
 
   return (
-    <section id="experience" ref={sectionRef} className="py-24 relative bg-black/50">
+    <section id="experience" ref={sectionRef} className="py-24 relative bg-primary/40 backdrop-blur-sm">
       <div className="container mx-auto px-6 md:px-12">
         <h2 className="exp-header text-4xl md:text-5xl font-bold mb-20 text-center">
           Work <span className="text-gradient">Experience.</span>
@@ -80,7 +80,7 @@ const Experience = () => {
 
         <div className="max-w-3xl mx-auto relative timeline-container">
           {/* Vertical Line */}
-          <div className="timeline-line absolute left-[28px] md:left-1/2 top-0 bottom-0 w-[2px] bg-white/10 md:-translate-x-1/2"></div>
+          <div className="timeline-line absolute left-[28px] md:left-1/2 top-0 bottom-0 w-[2px] bg-border md:-translate-x-1/2"></div>
 
           <div className="space-y-12">
             {experienceData.map((exp, idx) => (
@@ -90,19 +90,19 @@ const Experience = () => {
                   }`}
               >
                 {/* Timeline Dot */}
-                <div className="absolute left-0 md:left-1/2 w-14 h-14 bg-primary border-4 border-accent-purple rounded-full transform md:-translate-x-1/2 flex items-center justify-center z-10 shadow-[0_0_15px_rgba(139,92,246,0.5)]">
-                  <div className="w-3 h-3 bg-white rounded-full"></div>
+                <div className="absolute left-0 md:left-1/2 w-14 h-14 bg-primary border-4 border-accent-purple rounded-full transform md:-translate-x-1/2 flex items-center justify-center z-10 shadow-lg">
+                  <div className="w-3 h-3 bg-accent-blue rounded-full"></div>
                 </div>
 
                 {/* Content Box */}
                 <div className={`w-full pl-20 md:pl-0 md:w-1/2 ${idx % 2 === 0 ? 'md:pl-16' : 'md:pr-16 text-left md:text-right'
                   }`}>
-                  <div className="bg-white/5 border border-white/10 p-6 md:p-8 rounded-2xl hover:bg-white/10 transition-colors">
+                  <div className="bg-surface border border-border p-6 md:p-8 rounded-2xl hover:bg-white/5 transition-colors shadow-xl">
                     <span className="text-accent-blue font-mono text-sm mb-2 block">{exp.year}</span>
-                    <h3 className="text-2xl font-bold text-white mb-1">{exp.role}</h3>
-                    <h4 className="text-gray-400 text-lg mb-1">{exp.company}</h4>
-                    {exp.location && <p className="text-gray-500 text-sm mb-4">📍 {exp.location}</p>}
-                    <p className="text-gray-300 text-sm leading-relaxed">
+                    <h3 className="text-2xl font-bold text-text mb-1">{exp.role}</h3>
+                    <h4 className="text-secondary text-lg mb-1">{exp.company}</h4>
+                    {exp.location && <p className="text-secondary opacity-70 text-sm mb-4">📍 {exp.location}</p>}
+                    <p className="text-secondary text-sm leading-relaxed">
                       {exp.description}
                     </p>
                   </div>

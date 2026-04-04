@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
 
 const navLinks = [
   { name: 'About', href: '#about' },
   { name: 'Projects', href: '#projects' },
   { name: 'Skills', href: '#skills' },
   { name: 'Experience', href: '#experience' },
+  { name: 'Resume', href: '#resume' },
   { name: 'Contact', href: '#contact' },
 ];
 
-const Navbar = () => {
+const Navbar = ({ isDarkMode, toggleTheme }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
@@ -40,25 +41,34 @@ const Navbar = () => {
         }`}
     >
       <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
-        <a href="#" className="text-2xl font-bold tracking-tighter text-white z-50">
+        <a href="#" className="text-2xl font-bold tracking-tighter text-text z-50">
           PORTFOLIO<span className="text-accent-blue">.</span>
         </a>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center space-x-6">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className={`text-sm font-medium transition-colors hover:text-accent-blue ${activeSection === link.name.toLowerCase() ? 'text-accent-blue' : 'text-gray-400'
+              className={`text-sm font-medium transition-colors hover:text-accent-blue ${activeSection === link.name.toLowerCase() ? 'text-accent-blue' : 'text-secondary font-light'
                 }`}
             >
               {link.name}
             </a>
           ))}
+          
+          <button
+            onClick={toggleTheme}
+            className="p-2 rounded-full border border-border text-secondary hover:text-text hover:bg-surface transition-all"
+            aria-label="Toggle theme"
+          >
+            {isDarkMode ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
+
           <a
             href="#contact"
-            className="px-5 py-2 text-sm font-medium border border-accent-blue/50 text-white rounded-full hover:bg-accent-blue/10 transition-colors"
+            className="px-5 py-2 text-sm font-medium border border-accent-blue/50 text-text rounded-full hover:bg-accent-blue/10 transition-colors"
           >
             Hire Me
           </a>
@@ -66,7 +76,7 @@ const Navbar = () => {
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden text-white z-50"
+          className="md:hidden text-text z-50"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -83,7 +93,7 @@ const Navbar = () => {
             key={link.name}
             href={link.href}
             onClick={() => setIsOpen(false)}
-            className="text-2xl font-bold text-white hover:text-accent-blue transition-colors"
+            className="text-2xl font-bold text-text hover:text-accent-blue transition-colors"
           >
             {link.name}
           </a>
