@@ -6,10 +6,11 @@ A high-performance, visually stunning personal portfolio built with **React**, *
 
 ## ✨ Features
 
-- 🌑 **Premium Dark Aesthetic:** Deep navy and black theme with vibrant cyan/purple accents.
-- ⚡ **Lightning Fast:** Built on Vite 8 for near-instant load times.
+- 🌓 **Adaptive Light/Dark Mode:** Seamlessly switch between a premium dark-themed aesthetic and a crisp, high-contrast light mode.
+- ⚡ **Lightning Fast:** Built on Vite for near-instant load times.
 - 🎭 **GSAP Animations:** Scroll-triggered entrance animations for a refined user experience.
 - 📱 **Fully Responsive:** Optimized for desktop, tablet, and mobile devices.
+- 🎨 **High Contrast & Accessible:** Polished visibility for all UI elements in both lighting modes.
 - 🛠️ **Modern Tech Stack:** React 19, Tailwind CSS 4, and Lucide Icons.
 - 📁 **Project Showcase:** Interactive grid displaying featured engineering projects.
 
