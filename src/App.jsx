@@ -54,8 +54,9 @@ function App() {
       </main>
 
       <footer className="w-full py-8 text-center text-gray-500 border-t border-white/10 bg-primary z-20 relative">
-        <p>© {new Date().getFullYear()} Debasis Tripathy. Designed with passion.</p>
+        <p>© {new Date().getFullYear()} Debasis Tripathy (debasis-dev). Designed with passion.</p>
       </footer>
+
     </>
   );
 }

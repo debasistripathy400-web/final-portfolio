@@ -59,9 +59,9 @@ const Hero = () => {
             </div>
 
             <div className="overflow-hidden leading-tight py-2 pr-4">
-              <h1 className="hero-text text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold tracking-tighter text-text">
                 Hi, I'm <br className="sm:hidden" /> <span className="text-gradient pr-2">Debasis Tripathy</span>
-              </h1>
+                <span className="text-sm font-normal text-secondary opacity-70 ml-2 block sm:inline mt-1 sm:mt-0 font-mono tracking-tight">(@debasis-dev)</span>
+
             </div>
 
             <div className="overflow-hidden leading-tight py-2">
